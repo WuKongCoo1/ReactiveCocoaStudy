@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ViewController1.h
 //  ReactiveCocoaStudy
 //
 //  Created by 吴珂 on 16/4/25.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController1 : UIViewController
 
 
 @end
