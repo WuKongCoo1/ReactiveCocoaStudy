@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6766ADE71CD213650048E975 /* UIViewController+ViewDidLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6766ADE61CD213650048E975 /* UIViewController+ViewDidLoad.m */; };
 		676748EE1CCF0310002B6DDA /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 676748ED1CCF0310002B6DDA /* ViewController4.m */; };
 		676748F11CCF37BE002B6DDA /* ViewController5.m in Sources */ = {isa = PBXBuildFile; fileRef = 676748F01CCF37BE002B6DDA /* ViewController5.m */; };
 		676748F91CCF649F002B6DDA /* ViewController6.m in Sources */ = {isa = PBXBuildFile; fileRef = 676748F81CCF649F002B6DDA /* ViewController6.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6766ADE51CD213650048E975 /* UIViewController+ViewDidLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ViewDidLoad.h"; sourceTree = "<group>"; };
+		6766ADE61CD213650048E975 /* UIViewController+ViewDidLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ViewDidLoad.m"; sourceTree = "<group>"; };
 		676748EC1CCF0310002B6DDA /* ViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
 		676748ED1CCF0310002B6DDA /* ViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
 		676748EF1CCF37BE002B6DDA /* ViewController5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController5.h; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				677E77211CCDABAA008563C0 /* LaunchScreen.storyboard */,
 				677E77241CCDABAA008563C0 /* Info.plist */,
 				677E77131CCDABAA008563C0 /* Supporting Files */,
+				6766ADE51CD213650048E975 /* UIViewController+ViewDidLoad.h */,
+				6766ADE61CD213650048E975 /* UIViewController+ViewDidLoad.m */,
 			);
 			path = ReactiveCocoaStudy;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				677E771B1CCDABAA008563C0 /* ViewController1.m in Sources */,
+				6766ADE71CD213650048E975 /* UIViewController+ViewDidLoad.m in Sources */,
 				677E774B1CCDC3CC008563C0 /* UIButton+Block.m in Sources */,
 				677E774F1CCDFE1E008563C0 /* ListViewController.m in Sources */,
 				677E77481CCDC2FD008563C0 /* ViewController2.m in Sources */,
