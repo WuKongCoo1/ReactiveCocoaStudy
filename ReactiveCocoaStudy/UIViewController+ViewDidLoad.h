@@ -14,4 +14,8 @@
 
 - (void)swizzling_ViewWillAppear:(BOOL)animated;
 
+- (void)noImplement;
+
+- (void)swizzling_NoImplement;
+
 @end

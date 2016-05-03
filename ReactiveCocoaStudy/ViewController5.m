@@ -25,14 +25,9 @@
    /*--------------------------*/
     
     self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.wukongcoo1.com"]];
-    
     self.sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
-//    [self.sessionManager.requestSerializer setValue:@"text/html" forHTTPHeaderField:@"Content-type"];
-    
     self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//    self.sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    
-    
+
     @weakify(self)
     RACSignal *fetchData = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self)

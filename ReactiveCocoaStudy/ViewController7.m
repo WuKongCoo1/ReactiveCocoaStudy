@@ -27,17 +27,8 @@
                                     NSLog(@"%@", username);
                                    return @(username.length > 5 && password.length > 5);
                                }];
-    RAC(self.loginBtn, enabled) = canLoginSignal;
     
-//    RACSignal *test = [RACSignal combineLatest:@[
-//                              _usernameLabel.rac_textSignal,
-//                              _pwdLabel.rac_textSignal]];
-//    
-//    [test subscribeNext:^(id x) {
-//        RACTupleUnpack(NSString *name, NSString *pwd) = x;
-//        NSLog(@"%@ %@", name, pwd);
-//        self.loginBtn.enabled = name.length >= 5 && pwd.length >= 5;
-//    }];
+    RAC(self.loginBtn, enabled) = canLoginSignal;
 
 }
 

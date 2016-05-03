@@ -155,8 +155,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mN2-nP-pIu">
-                                <rect key="frame" x="126" y="177" width="334" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mN2-nP-pIu">
+                                <rect key="frame" x="285" y="177" width="30" height="30"/>
                                 <state key="normal" title="登录"/>
                                 <state key="disabled">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,8 +165,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mN2-nP-pIu" firstAttribute="top" secondItem="nqw-Cg-ywa" secondAttribute="bottom" constant="29" id="1MH-UH-ehO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="syU-tB-RIL" secondAttribute="trailing" constant="120" id="BlX-j4-pLt"/>
                             <constraint firstItem="syU-tB-RIL" firstAttribute="top" secondItem="SB9-Js-FPR" secondAttribute="bottom" constant="60" id="JQY-tP-Otw"/>
+                            <constraint firstItem="mN2-nP-pIu" firstAttribute="centerX" secondItem="L6u-Kr-uOk" secondAttribute="centerX" id="Q9M-91-fBo"/>
                             <constraint firstItem="nqw-Cg-ywa" firstAttribute="width" secondItem="syU-tB-RIL" secondAttribute="width" id="a1A-x5-Vaj"/>
                             <constraint firstItem="nqw-Cg-ywa" firstAttribute="leading" secondItem="syU-tB-RIL" secondAttribute="leading" id="cBM-3e-RCl"/>
                             <constraint firstItem="syU-tB-RIL" firstAttribute="leading" secondItem="L6u-Kr-uOk" secondAttribute="leadingMargin" constant="106" id="dbe-df-CPW"/>

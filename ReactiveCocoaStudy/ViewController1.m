@@ -39,13 +39,13 @@
     [self.view addSubview:btn];
     //按钮事件
     [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        NSLog(@"摸了按钮啦");
+        NSLog(@"点击按钮");
     }];
     
     //selector
     [[self rac_signalForSelector:@selector(touchBtn:)] subscribeNext:^(id x) {
         NSLog(@"监听selector");
-    }];;
+    }];
     
     //文本信号
     [_tf.rac_textSignal subscribeNext:^(id x) {
@@ -55,10 +55,12 @@
     /*宏定义使用*/
     RAC(_lbl, text) = _tv.rac_textSignal;
     
+    //KVO
     [RACObserve(_lbl, text) subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
     
+    //元组
     RACTuple *tuple = RACTuplePack(@3, @4);
     
     RACTupleUnpack(NSString *key, NSString *value) = tuple;

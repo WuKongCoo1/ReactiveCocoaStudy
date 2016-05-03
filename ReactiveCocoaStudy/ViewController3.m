@@ -21,22 +21,34 @@ NSURLSessionTaskDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     self.navigationItem.title = @"网络请求";
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.jianshu.com/p/87ef6720a096"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.wukongcoo1.com/content/images/2016/04/----3.gif"]];
     
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSLog(@"data: %@", data);
+    RACSignal *requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+       
+        NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            
+            [subscriber sendNext:data];
+            [subscriber sendCompleted];
+            
+        }];
+        
+        [task resume];
+        
+        return nil;
         
     }];
     
-    [[session dataTaskWithURL:[NSURL URLWithString:@"http://www.jianshu.com/p/87ef6720a096"]] resume];;
-    
-    [task resume];
+    [requestSignal subscribeNext:^(id x) {
+        NSLog(@"请求到了 %@", x);
+    }];
 
     
 }
